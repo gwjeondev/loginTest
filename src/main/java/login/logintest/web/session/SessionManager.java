@@ -46,7 +46,6 @@ public class SessionManager {
 
     public void sessionExpire(HttpServletRequest request) {
         Cookie sessionCookie = findCookie(request);
-
         if(sessionCookie != null) {
             store.remove(sessionCookie.getValue());
         }
